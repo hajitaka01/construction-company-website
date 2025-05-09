@@ -1,0 +1,19 @@
+RewriteEngine On
+RewriteBase /ads/
+
+# Handle directory without trailing slash
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*[^/])$ $1/ [L,R=301]
+
+# Rewrite URLs to PHP files
+RewriteRule ^pages/about$ pages/about/index.php [L]
+RewriteRule ^pages/about/$ pages/about/index.php [L]
+RewriteRule ^pages/services$ pages/services/index.php [L]
+RewriteRule ^pages/services/$ pages/services/index.php [L]
+RewriteRule ^pages/projects$ pages/projects/index.php [L]
+RewriteRule ^pages/projects/$ pages/projects/index.php [L]
+RewriteRule ^pages/blog$ pages/blog/index.php [L]
+RewriteRule ^pages/blog/$ pages/blog/index.php [L]
+RewriteRule ^pages/testimonials$ pages/testimonials/index.php [L]
+RewriteRule ^pages/testimonials/$ pages/testimonials/index.php [L]

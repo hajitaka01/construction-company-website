@@ -1,0 +1,188 @@
+
+/* Page Header */
+.page-header {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/about-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    color: var(--white);
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.breadcrumb {
+    background: transparent;
+    justify-content: center;
+}
+
+.breadcrumb-item a {
+    color: var(--white);
+}
+
+.breadcrumb-item.active {
+    color: var(--secondary);
+}
+
+/* About Content */
+.about-content {
+    padding-right: 30px;
+}
+
+.about-content h2 {
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.about-content .lead {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.about-features {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.about-features li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.about-features li i {
+    color: var(--success);
+    margin-right: 10px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Vision & Mission */
+.vision-box,
+.mission-box {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.vision-box h3,
+.mission-box h3 {
+    color: var(--primary);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.vision-box i,
+.mission-box i {
+    margin-right: 10px;
+}
+
+/* Core Values */
+.value-item {
+    text-align: center;
+    padding: 30px;
+    background: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    height: 100%;
+}
+
+.value-item i {
+    font-size: 40px;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.value-item h4 {
+    color: var(--primary-dark);
+    margin-bottom: 15px;
+}
+
+/* History Timeline */
+.timeline {
+    position: relative;
+    padding: 40px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--primary);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    margin-bottom: 40px;
+    position: relative;
+    width: 50%;
+    padding-right: 40px;
+}
+
+.timeline-item:nth-child(even) {
+    margin-left: auto;
+    padding-right: 0;
+    padding-left: 40px;
+}
+
+.timeline-item .year {
+    position: absolute;
+    top: 0;
+    right: -25px;
+    background: var(--primary);
+    color: var(--white);
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+
+.timeline-item:nth-child(even) .year {
+    right: auto;
+    left: -25px;
+}
+
+.timeline-item .content {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 30px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 0;
+    }
+
+    .timeline-item:nth-child(even) {
+        padding-left: 70px;
+    }
+
+    .timeline-item .year {
+        left: 0;
+        right: auto;
+    }
+
+    .timeline-item:nth-child(even) .year {
+        left: 0;
+    }
+}
