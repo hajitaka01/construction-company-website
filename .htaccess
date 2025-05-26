@@ -17,3 +17,22 @@ RewriteRule ^pages/blog$ pages/blog/index.php [L]
 RewriteRule ^pages/blog/$ pages/blog/index.php [L]
 RewriteRule ^pages/testimonials$ pages/testimonials/index.php [L]
 RewriteRule ^pages/testimonials/$ pages/testimonials/index.php [L]
+
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Chặn truy cập trực tiếp vào thư mục hình ảnh
+    RewriteCond %{HTTP_REFERER} !^http://(www\.)?localhost [NC]
+    RewriteCond %{HTTP_REFERER} !^http://(www\.)?your-domain.com [NC]
+    RewriteRule \.(jpg|jpeg|png|gif)$ - [F,NC]
+
+    # Thêm tiêu đề bảo mật
+    <FilesMatch "\.(jpg|jpeg|png|gif)$">
+        Header set X-Content-Type-Options "nosniff"
+        Header set X-Frame-Options "SAMEORIGIN"
+        Header set Content-Security-Policy "img-src 'self'"
+    </FilesMatch>
+</IfModule>
+
+

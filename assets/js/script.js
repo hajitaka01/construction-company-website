@@ -229,3 +229,73 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Ngăn chặn chuột phải
+    document.addEventListener('contextmenu', function(e) {
+        if (e.target.nodeName === 'IMG') {
+            e.preventDefault();
+            return false;
+        }
+    });
+
+    // Ngăn chặn kéo thả hình ảnh
+    document.addEventListener('dragstart', function(e) {
+        if (e.target.nodeName === 'IMG') {
+            e.preventDefault();
+            return false;
+        }
+    });
+
+    // Ngăn chặn phím tắt
+    document.addEventListener('keydown', function(e) {
+        // Chặn Ctrl+S, Ctrl+U, Ctrl+Shift+I
+        if (
+            (e.ctrlKey && e.keyCode == 83) || 
+            (e.ctrlKey && e.keyCode == 85) || 
+            (e.ctrlKey && e.shiftKey && e.keyCode == 73)
+        ) {
+            e.preventDefault();
+            return false;
+        }
+    });
+});
+
+// Thêm vào cuối file script.js
+document.addEventListener('DOMContentLoaded', function() {
+    // Disable right click
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+        return false;
+    });
+
+    // Disable keyboard shortcuts
+    document.addEventListener('keydown', function(e) {
+        // Ctrl+U (View Source)
+        if (e.ctrlKey && e.keyCode == 85) {
+            e.preventDefault();
+            return false;
+        }
+        // Ctrl+S (Save)
+        if (e.ctrlKey && e.keyCode == 83) {
+            e.preventDefault();
+            return false;
+        }
+        // Ctrl+Shift+I or F12 (Developer Tools)
+        if ((e.ctrlKey && e.shiftKey && e.keyCode == 73) || e.keyCode == 123) {
+            e.preventDefault();
+            return false;
+        }
+        // Ctrl+Shift+C (Inspector)
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 67) {
+            e.preventDefault();
+            return false;
+        }
+    });
+
+    // Disable text selection
+    document.addEventListener('selectstart', function(e) {
+        e.preventDefault();
+        return false;
+    });
+});
+

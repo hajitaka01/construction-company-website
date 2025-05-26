@@ -5,22 +5,35 @@ include '../includes/navbar.php';
 ?>
 
 <!-- Page Header -->
-<section class="page-header">
-    <div class="container">
-        <h1>Liên Hệ</h1>
-        <nav aria-label="breadcrumb">
-            
-        </nav>
+<section class="page-header-slider">
+    <div class="slider-overlay"></div>
+    <div class="slider-container">
+        <div class="slide active" style="background-image: url('<?php echo BASE_URL; ?>/assets/images/contact/header-bg.jpg');">
+            <div class="container">
+                <div class="slide-content">
+                    <h1 class="animate-in">Liên Hệ</h1>
+                   
+                    <div class="header-stats animate-in">
+                        <div class="stat-box">
+                            <span class="counter" data-count="24">0</span>
+                            <span class="stat-label">Giờ Hỗ Trợ</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="counter" data-count="98">0</span>
+                            <span class="stat-label">% Khách Hài Lòng</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
 <section class="contact-section section">
     <div class="container">
         <!-- Thông tin liên hệ và Form liên hệ cùng một hàng -->
-        <div class="row mb-5">
-            <!-- Thông tin liên hệ -->
-            <div class="col-lg-6 mb-4 mb-lg-0">
-                <div class="contact-info animate-in show">
+        <div class="contact-content">
+            <div class="contact-info animate-in show">
                     <h3>Thông Tin Liên Hệ</h3>
                     <div class="row">
                         <div class="col-md-6 col-sm-6 mb-4">
@@ -64,72 +77,31 @@ include '../includes/navbar.php';
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Form liên hệ -->
-            <div class="col-lg-6">
-                <div class="contact-form-container animate-in show">
-                    <h3>Gửi Thông Tin Liên Hệ</h3>
-                    <p class="mb-4">Vui lòng điền đầy đủ thông tin, chúng tôi sẽ liên hệ lại sớm nhất.</p>
+            
+            <div class="contact-form" data-aos="fade-left">
+                <form id="contactForm" action="javascript:void(0);" method="POST">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Họ tên của bạn *" required>
+                    </div>
                     
-                    <form id="contactForm" method="POST" action="<?php echo BASE_URL; ?>/process/contact.php" class="contact-form">
-                        <div class="form-group">
-                            <label for="fullname">Họ và tên *</label>
-                            <input type="text" class="form-control" id="fullname" name="fullname" required 
-                                   pattern="^[a-zA-ZÀ-ỹ\s]{3,50}$" 
-                                   placeholder="Nhập họ và tên của bạn"
-                                   title="Họ tên phải từ 3-50 ký tự và không chứa số">
-                            <span class="error-message">Họ tên phải từ 3-50 ký tự và không chứa số</span>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="phone">Số điện thoại *</label>
-                            <input type="tel" class="form-control" id="phone" name="phone" required
-                                   pattern="^(0|\+84)[0-9]{9}$"
-                                   placeholder="VD: 0909123456"
-                                   title="Số điện thoại không hợp lệ">
-                            <span class="error-message">Vui lòng nhập đúng định dạng số điện thoại Việt Nam</span>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email" name="email"
-                                   placeholder="example@email.com"
-                                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
-                            <span class="error-message">Vui lòng nhập đúng định dạng email</span>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="subject">Chủ đề *</label>
-                            <select class="form-control" id="subject" name="subject" required>
-                                <option value="" selected disabled>Chọn chủ đề</option>
-                                <option value="tu-van">Tư vấn dịch vụ</option>
-                                <option value="bao-gia">Yêu cầu báo giá</option>
-                                <option value="khieu-nai">Khiếu nại/Góp ý</option>
-                                <option value="khac">Khác</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Nội dung *</label>
-                            <textarea class="form-control" id="message" name="message" rows="5" required
-                                      minlength="10" maxlength="500" 
-                                      placeholder="Nhập nội dung liên hệ của bạn"></textarea>
-                            <span class="error-message">Nội dung phải từ 10-500 ký tự</span>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary" id="submitBtn">
-                            <i class="fas fa-paper-plane me-2"></i>Gửi Liên Hệ
-                        </button>
-
-                        <div class="alert alert-success mt-4 d-none" id="successMessage">
-                            Cảm ơn bạn đã liên hệ! Chúng tôi sẽ phản hồi sớm nhất có thể.
-                        </div>
-                        <div class="alert alert-danger mt-4 d-none" id="errorMessage">
-                            Có lỗi xảy ra. Vui lòng thử lại sau!
-                        </div>
-                    </form>
-                </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Email của bạn *" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Số điện thoại *" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Tiêu đề">
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea class="form-control" id="message" name="message" placeholder="Nội dung tin nhắn *" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Gửi tin nhắn</button>
+                </form>
             </div>
         </div>
 
@@ -218,6 +190,45 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Check on scroll
     window.addEventListener('scroll', checkIfInView);
+});
+
+// Add this to each page or in a common JS file
+document.addEventListener('DOMContentLoaded', function() {
+    // Counter animation
+    const counters = document.querySelectorAll('.counter');
+    counters.forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-count'));
+        const duration = 2000; // 2 seconds
+        const step = target / (duration / 16); // 60fps
+
+        let current = 0;
+        const updateCounter = () => {
+            current += step;
+            if (current < target) {
+                counter.textContent = Math.round(current);
+                requestAnimationFrame(updateCounter);
+            } else {
+                counter.textContent = target;
+            }
+        };
+        updateCounter();
+    });
+
+    // Add particles effect
+    const particles = document.createElement('div');
+    particles.className = 'particles';
+    document.querySelector('.page-header-slider').appendChild(particles);
+
+    // Create particles
+    for(let i = 0; i < 50; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.top = Math.random() * 100 + '%';
+        particle.style.animationDelay = Math.random() * 20 + 's';
+        particle.style.animationDuration = 15 + Math.random() * 10 + 's';
+        particles.appendChild(particle);
+    }
 });
 </script>
 
