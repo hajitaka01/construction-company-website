@@ -22,7 +22,18 @@ This is a real-world website developed for a construction company.
 - Built dynamic content
 
 ## 📸 Screenshots
-(Add screenshots here)
+
+### 🏠 Homepage
+![Home](images/home.png)
+
+### 📋 Navigation Menu
+![Menu](images/menu.png)
+
+### 🧱 Services Section
+![Services](images/services.png)
+
+### 📞 Contact / CTA
+![Contact](images/contact.png)
 
 ## ⚙️ Setup Instructions
 1. Install XAMPP
