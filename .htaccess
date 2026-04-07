@@ -6,25 +6,13 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*[^/])$ $1/ [L,R=301]
 
-# Rewrite URLs to PHP files
-RewriteRule ^pages/about$ pages/about/index.php [L]
-RewriteRule ^pages/about/$ pages/about/index.php [L]
-RewriteRule ^pages/services$ pages/services/index.php [L]
-RewriteRule ^pages/services/$ pages/services/index.php [L]
-RewriteRule ^pages/projects$ pages/projects/index.php [L]
-RewriteRule ^pages/projects/$ pages/projects/index.php [L]
-RewriteRule ^pages/blog$ pages/blog/index.php [L]
-RewriteRule ^pages/blog/$ pages/blog/index.php [L]
-RewriteRule ^pages/testimonials$ pages/testimonials/index.php [L]
-RewriteRule ^pages/testimonials/$ pages/testimonials/index.php [L]
-
 
 <IfModule mod_rewrite.c>
     RewriteEngine On
     
     # Chặn truy cập trực tiếp vào thư mục hình ảnh
     RewriteCond %{HTTP_REFERER} !^http://(www\.)?localhost [NC]
-    RewriteCond %{HTTP_REFERER} !^http://(www\.)?your-domain.com [NC]
+    RewriteCond %{HTTP_REFERER} !^http://(www\.)?hoanggiakhanh.com [NC]
     RewriteRule \.(jpg|jpeg|png|gif)$ - [F,NC]
 
     # Thêm tiêu đề bảo mật

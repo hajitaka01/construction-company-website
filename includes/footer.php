@@ -22,10 +22,10 @@
                     <h3 class="footer-title">Liên kết nhanh</h3>
                     <ul class="footer-links">
                         <li><a href="<?php echo BASE_URL; ?>"><i class="fas fa-chevron-right"></i> Trang chủ</a></li>
-                        <li><a href="<?php echo BASE_URL; ?>/pages/about"><i class="fas fa-chevron-right"></i> Về chúng tôi</a></li>
-                        <li><a href="<?php echo BASE_URL; ?>/pages/services"><i class="fas fa-chevron-right"></i> Dịch vụ</a></li>
-                        <li><a href="<?php echo BASE_URL; ?>/pages/projects"><i class="fas fa-chevron-right"></i> Dự án</a></li>
-                        <li><a href="<?php echo BASE_URL; ?>/pages/blog"><i class="fas fa-chevron-right"></i> Tin tức</a></li>
+                        <li><a href="<?php echo BASE_URL; ?>/pages/about.php"><i class="fas fa-chevron-right"></i> Về chúng tôi</a></li>
+                        <li><a href="<?php echo BASE_URL; ?>/pages/services.php"><i class="fas fa-chevron-right"></i> Dịch vụ</a></li>
+                        <li><a href="<?php echo BASE_URL; ?>/pages/projects.php"><i class="fas fa-chevron-right"></i> Dự án</a></li>
+                        <li><a href="<?php echo BASE_URL; ?>/pages/blog.php"><i class="fas fa-chevron-right"></i> Tin tức</a></li>
                         <li><a href="<?php echo BASE_URL; ?>/pages/contact.php"><i class="fas fa-chevron-right"></i> Liên hệ</a></li>
                     </ul>
                 </div>
@@ -47,19 +47,19 @@
                     <ul class="footer-contact">
                         <li>
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>123 Điện Biên Phủ, Phường 15, Quận Bình Thạnh, TP.HCM</span>
+                            <span>A7 - 9/8 Trung Tâm Đô Thị Chí Linh, Phường 10, TP. Vũng Tàu, Tỉnh Bà Rịa - Vũng Tàu</span>
                         </li>
                         <li>
                             <i class="fas fa-phone-alt"></i>
-                            <span>(+84) 28 1234 5678</span>
+                            <span>0979596114</span>
                         </li>
                         <li>
                             <i class="fas fa-envelope"></i>
-                            <span>info@hoanggiakhanh.com</span>
+                            <span>hoanggiakhanh114@gmail.com</span>
                         </li>
                         <li>
                             <i class="fas fa-clock"></i>
-                            <span>Thứ Hai - Thứ Bảy: 8:00 - 17:30</span>
+                            <span>Thứ Hai - Thứ Bảy: 7:30 - 17:30</span>
                         </li>
                     </ul>
                 </div>

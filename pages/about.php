@@ -323,7 +323,7 @@ include '../includes/navbar.php'; ?>
                     </div>
                 </div>
                 <div class="col-lg-4 text-center text-lg-end" data-aos="fade-left">
-                    <a href="<?php echo BASE_URL; ?>/contact" class="btn btn-light btn-lg">Liên Hệ Ngay</a>
+                    <a href="<?php echo BASE_URL; ?>/contact" class="btn-custom btn-primary">Liên Hệ Ngay</a>
                 </div>
             </div>
         </div>
