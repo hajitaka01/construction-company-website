@@ -22,6 +22,7 @@ This is a real-world website developed for a construction company.
 - Built dynamic content
 
 ## 📸 Screenshots
+Here are some main interfaces of the website:
 
 ### 🏠 Homepage
 ![Home](images/home.png)
